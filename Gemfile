@@ -17,10 +17,11 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 
 gem 'uglifier'
-
 gem 'bootstrap-sass'
-
 gem 'bcrypt'
+gem 'faker', '>= 1.7.3'
+gem 'will_paginate',           '>= 3.1.6'
+gem 'bootstrap-will_paginate', '>= 1.0.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
