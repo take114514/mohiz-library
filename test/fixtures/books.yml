@@ -1,0 +1,55 @@
+orange:
+  title: "I just ate an orange!"
+  author: "I just ate an orange!"
+  created_at: <%= 10.minutes.ago %>
+  user: michael
+
+tau_manifesto:
+  title: "Check out the @tauday site by @mhartl: http://tauday.com"
+  author: "Check out the @tauday site by @mhartl: http://tauday.com"
+  created_at: <%= 3.years.ago %>
+  user: michael
+
+cat_video:
+  title: "Sad cats are sad: http://youtu.be/PKffm2uI4dk"
+  author: "Sad cats are sad: http://youtu.be/PKffm2uI4dk"
+  created_at: <%= 2.hours.ago %>
+  user: michael
+
+most_recent:
+  title: "Writing a short test"
+  author: "Writing a short test"
+  created_at: <%= Time.zone.now %>
+  user: michael
+
+ants:
+  title: "Oh, is that what you want? Because that's how you get ants!"
+  author: "Oh, is that what you want? Because that's how you get ants!"
+  created_at: <%= 2.years.ago %>
+  user: archer
+
+zone:
+  title: "Danger zone!"
+  author: "Danger zone!"
+  created_at: <%= 3.days.ago %>
+  user: archer
+
+tone:
+  title: "I'm sorry. Your words made sense, but your sarcastic tone did not."
+  author: "I'm sorry. Your words made sense, but your sarcastic tone did not."
+  created_at: <%= 10.minutes.ago %>
+  user: lana
+
+van:
+  title: "Dude, this van's, like, rolling probable cause."
+  author: "Dude, this van's, like, rolling probable cause."
+  created_at: <%= 4.hours.ago %>
+  user: lana
+
+  <% 30.times do |n| %>
+book_<%= n %>:
+  title: <%= Faker::Lorem.sentence(5) %>
+  author: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  user: michael
+  <% end %>

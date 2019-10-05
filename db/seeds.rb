@@ -25,11 +25,12 @@ User.create!(name:  "Example User",
                activated_at: Time.zone.now)
 end
 
-# マイクロポスト
+# 書籍データ
 users = User.order(:created_at).take(6)
 50.times do
-  content = Faker::Lorem.sentence(5)
-  users.each { |user| user.microposts.create!(content: content) }
+  title = Faker::Lorem.sentence(5)
+  author = Faker::Lorem.sentence(5)
+  users.each { |user| user.books.create!(title: title, author:author) }
 end
 
 # リレーションシップ
