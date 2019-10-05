@@ -1,12 +1,12 @@
-# Ruby on Rails チュートリアルのサンプルアプリケーション
+# Mohiz Library
 
-これは、次の教材で作られたサンプルアプリケーションです。
+これは、次の教材で作られた書籍管理サービスです。
 [_Ruby on Rails チュートリアル_](https://railstutorial.jp/)
 [Michael Hartl](http://www.michaelhartl.com/) 著
 
 ## ライセンス
 
-[Ruby on Rails チュートリアル](https://railstutorial.jp/)内にある
+元になった[Ruby on Rails チュートリアル](https://railstutorial.jp/)のライセンシーに基づき、
 ソースコードは MIT ライセンスと Beerware ライセンスのもとで公開されています。
 詳細は [LICENSE.md](LICENSE.md) をご覧ください。
 

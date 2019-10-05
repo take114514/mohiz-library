@@ -258,30 +258,18 @@ input {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
   }
-  .user {
-    margin-top: 5em;
-    padding-top: 0;
+  .detail{
+    border-collapse: separate;
+    border-spacing: 8px 0px;
   }
-  .title{
-    display: block;
-    margin-left: 60px;
-    img {
-      display: block;
-      padding: 5px 0;
-    }
+  .content{
+    display: flex;
   }
-  .author{
-    display: block;
-    margin-left: 60px;
-    img {
-      display: block;
-      padding: 5px 0;
-    }
-  }
+
   .timestamp {
     color: $gray-light;
     display: block;
-    margin-left: 60px;
+    margin-left: 8px;
   }
   .gravatar {
     float: left;

@@ -1,14 +1,34 @@
 <li id="book-<%= book.id %>">
-  <%= link_to gravatar_for(book.user, size: 50), book.user %>
-  <span class="user"><%= link_to book.user.name, book.user %></span>
-  <%= image_tag book.picture.url if book.picture? %>
-  <span class="title"> Title: <%= book.title %> </span>
-  <span class="author"> Author: <%= book.author %> </span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(book.created_at) %> ago.
-    <% if current_user?(book.user) %>
-      <%= link_to "delete", book, method: :delete,
-                  data: { confirm: "You sure?" } %>
-    <% end %>
-  </span>
+  <div class="user-detail">
+    <%= link_to gravatar_for(book.user, size: 50), book.user %>
+  </div>
+  <div class="content">
+    <div class="image">
+      <%= image_tag book.picture.url, width: "150px" if book.picture? %>
+      <%= image_tag "no-image.png", width: "150px" unless book.picture? %>
+    </div>
+    <div class="book-details">
+      <table class="detail">
+        <tr>
+          <td>User</td>
+          <td><%= link_to book.user.name, book.user %></td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td><%= book.title %></td>
+        </tr>
+        <tr>
+          <td>Author</td>
+          <td><%= book.author %></td>
+        </tr>
+      </table>
+      <span class="timestamp">
+        Posted <%= time_ago_in_words(book.created_at) %> ago.
+        <% if current_user?(book.user) %>
+          <%= link_to "delete", book, method: :delete,
+                      data: { confirm: "You sure?" } %>
+        <% end %>
+      </span>
+    </div>
+  </div>
 </li>
